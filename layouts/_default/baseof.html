@@ -4,7 +4,7 @@
 	<title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
 	<link rel="canonical" href="{{ .Site.BaseURL }}">
 	<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
-	<link rel='stylesheet' type='text/css' href='https://liam8888999.github.io/recipes/style.css'>
+	<link rel='stylesheet' type='text/css' href='https://liam8888999.github.io/style.css'>
 	{{ with .Site.Params.favicon }}<link rel="icon" href="{{ . }}">
 	{{ end -}}
 	<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
@@ -16,7 +16,7 @@
 </head>
 <body>
 {{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}
-{{ if not .IsHome }}<a href="https://liam8888999.github.io/recipes/" style="padding-top: 50px;">&laquo; Home</a>{{ end }}
+{{ if not .IsHome }}<a href="https://liam8888999.github.io/" style="padding-top: 50px;">&laquo; Home</a>{{ end }}
 <main>
 <header><h1 id="tag_{{ .Title }}">{{ block "title" . }}{{ end }}</h1></header>
 <article>
