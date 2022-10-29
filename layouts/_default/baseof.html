@@ -16,8 +16,8 @@
 </head>
 <body>
 {{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}
+{{ if not .IsHome }}<a href="https://liam8888999.github.io/recipes/">Home</a>{{ end }}
 <main>
-{{ if not .IsHome }}<header style="display: inline-block;"><a href="https://liam8888999.github.io/recipes/">Home</a><h1 id="tag_{{ .Title }}">{{ block "title" . }}{{ end }}</h1></header>{{ end }}
 <header><h1 id="tag_{{ .Title }}">{{ block "title" . }}{{ end }}</h1></header>
 <article>
 {{ block "main" . }}
