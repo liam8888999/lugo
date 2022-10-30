@@ -4,14 +4,10 @@
 {{ define "main" -}}
 {{ .Content }}
 <ul>
-{{- range.Pages }}
+		{{ range (sort .Pages "Title") }}
 	<li>
-		{{- if .Param "datesinlist" }}<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006 Jan 02" }}</time> &ndash; {{ end -}}
-		<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-		{{- if .Param "authorsinlist" }}
-		{{- range .Param "authors" }} by {{ . }}{{ end -}}
-		{{ end -}}
-		</li>
-{{- end }}
+	    <a href="{{ .Permalink }}">{{ .Title }}</a>
+	</li>
+	{{ end }}
 </ul>
 {{- end }}
